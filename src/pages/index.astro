@@ -3,6 +3,7 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+export const prerender = true;
 ---
 
 <script>
@@ -26,6 +27,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
   </head>
   <body>
     <Header title={SITE_TITLE} />
+    dasadnasjdnajskdkajshkd
     <div class="bg-primary dark:bg-primaryDark h-56 text-center pt-2">
       <h1 class="text-secondary dark:text-white font-bold text-4xl mb-7">
         ¿Cómo podemos ayudarte? 🤔
