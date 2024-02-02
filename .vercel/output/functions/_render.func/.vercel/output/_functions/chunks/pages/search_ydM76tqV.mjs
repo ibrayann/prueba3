@@ -1,8 +1,10 @@
-import { c as createAstro, d as createComponent, r as renderTemplate, m as maybeRenderHead } from '../astro_Deh159hG.mjs';
+import { c as createAstro, d as createComponent, r as renderTemplate, m as maybeRenderHead } from '../astro_ewd9_6AG.mjs';
 import 'kleur/colors';
 import 'clsx';
+import 'cssesc';
 
 const $$Astro = createAstro("https://example.com");
+const prerender = false;
 const $$Search = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$Search;
@@ -23,4 +25,4 @@ Home
 const $$file = "/Users/brayangatica/despliegueaprod/prueba3/src/pages/search.astro";
 const $$url = "/search";
 
-export { $$Search as default, $$file as file, $$url as url };
+export { $$Search as default, $$file as file, prerender, $$url as url };

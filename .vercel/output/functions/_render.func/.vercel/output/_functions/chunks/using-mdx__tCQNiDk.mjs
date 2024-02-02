@@ -6,7 +6,7 @@ const id = "using-mdx.mdx";
 						const _internal = {
 							type: 'content',
 							filePath: "/Users/brayangatica/despliegueaprod/prueba3/src/content/blog/using-mdx.mdx",
-							rawData: "\ntitle: 'Using MDX'\ndescription: 'Lorem ipsum dolor sit amet'\npubDate: 'Jul 02 2022'\nheroImage: '/blog-placeholder-5.jpg'",
+							rawData: undefined,
 						};
 
 export { _internal, body, collection, data, id, slug };

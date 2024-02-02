@@ -6,7 +6,7 @@ const id = "markdown-style-guide.md";
 						const _internal = {
 							type: 'content',
 							filePath: "/Users/brayangatica/despliegueaprod/prueba3/src/content/blog/markdown-style-guide.md",
-							rawData: "\ntitle: 'Markdown Style Guide'\ndescription: 'Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.'\npubDate: 'Jul 01 2022'\nheroImage: '/blog-placeholder-1.jpg'",
+							rawData: undefined,
 						};
 
 export { _internal, body, collection, data, id, slug };
