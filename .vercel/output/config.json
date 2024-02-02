@@ -28,7 +28,7 @@
 			"dest": "_render"
 		},
 		{
-			"src": "^\\/search\\/?$",
+			"src": "^(?:\\/(.*?))?\\/?$",
 			"dest": "_render"
 		}
 	]

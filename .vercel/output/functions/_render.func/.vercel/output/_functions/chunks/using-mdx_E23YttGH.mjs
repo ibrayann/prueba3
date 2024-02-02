@@ -1,8 +1,8 @@
 async function getMod() {
-						return import('./first-post_Qu0rf80q.mjs');
+						return import('./using-mdx_muErEhZn.mjs');
 					}
 					const collectedLinks = [];
-					const collectedStyles = [];
+					const collectedStyles = ["a[data-astro-cid-eimmu3lg]{display:inline-block;text-decoration:none}a[data-astro-cid-eimmu3lg].active{font-weight:bolder;text-decoration:underline}\n"];
 					const collectedScripts = [];
 					const defaultMod = { __astroPropagation: true, getMod, collectedLinks, collectedStyles, collectedScripts };
 

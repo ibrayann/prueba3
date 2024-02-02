@@ -1,4 +1,4 @@
-import { c as createAstro, d as createComponent, r as renderTemplate, m as maybeRenderHead, g as renderComponent } from '../astro_ewd9_6AG.mjs';
+import { c as createAstro, d as createComponent, r as renderTemplate, m as maybeRenderHead, e as renderComponent } from '../astro_04W25gnT.mjs';
 import 'kleur/colors';
 import 'clsx';
 import 'cssesc';
@@ -23,13 +23,13 @@ Home
 
 const $$Astro = createAstro("https://example.com");
 const prerender = false;
-const $$Search = createComponent(async ($$result, $$props, $$slots) => {
+const $$ = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
-  Astro2.self = $$Search;
+  Astro2.self = $$;
   return renderTemplate`${renderComponent($$result, "SearchComponent", $$SearchComponent, {})}`;
-}, "/Users/brayangatica/despliegueaprod/prueba3/src/pages/search.astro", void 0);
+}, "/Users/brayangatica/despliegueaprod/prueba3/src/pages/[...search].astro", void 0);
 
-const $$file = "/Users/brayangatica/despliegueaprod/prueba3/src/pages/search.astro";
-const $$url = "/search";
+const $$file = "/Users/brayangatica/despliegueaprod/prueba3/src/pages/[...search].astro";
+const $$url = "/[...search]";
 
-export { $$Search as default, $$file as file, prerender, $$url as url };
+export { $$ as default, $$file as file, prerender, $$url as url };

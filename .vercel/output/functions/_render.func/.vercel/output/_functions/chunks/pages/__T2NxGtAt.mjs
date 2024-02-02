@@ -1,8 +1,8 @@
-import { c as createAstro, d as createComponent, r as renderTemplate, e as addAttribute, m as maybeRenderHead, s as spreadAttributes, f as renderSlot, g as renderComponent, h as renderHead, A as AstroError, i as UnknownContentCollectionError, j as renderUniqueStylesheet, k as renderScriptElement, l as createHeadAndContent, u as unescapeHTML } from '../astro_ewd9_6AG.mjs';
+import { c as createAstro, d as createComponent, r as renderTemplate, f as addAttribute, m as maybeRenderHead, s as spreadAttributes, g as renderSlot, e as renderComponent, h as renderHead, A as AstroError, i as UnknownContentCollectionError, j as renderUniqueStylesheet, k as renderScriptElement, l as createHeadAndContent, u as unescapeHTML } from '../astro_04W25gnT.mjs';
 import 'kleur/colors';
 import 'clsx';
 import 'cssesc';
-import { p as prependForwardSlash } from '../astro/assets-service_dE1EDvHj.mjs';
+import { p as prependForwardSlash } from '../astro/assets-service_mhwgWe3Q.mjs';
 /* empty css                          */
 /* empty css                                                                   */
 /* empty css                          */
@@ -244,7 +244,7 @@ createCollectionToGlobResultMap({
 });
 
 let lookupMap = {};
-lookupMap = {"blog":{"type":"content","entries":{"first-post":"/src/content/blog/first-post.md","markdown-style-guide":"/src/content/blog/markdown-style-guide.md","second-post":"/src/content/blog/second-post.md","third-post":"/src/content/blog/third-post.md","using-mdx":"/src/content/blog/using-mdx.mdx"}}};
+lookupMap = {"blog":{"type":"content","entries":{"first-post":"/src/content/blog/first-post.md","markdown-style-guide":"/src/content/blog/markdown-style-guide.md","second-post":"/src/content/blog/second-post.md","using-mdx":"/src/content/blog/using-mdx.mdx","third-post":"/src/content/blog/third-post.md"}}};
 
 function createGlobLookup(glob) {
 	return async (collection, lookupId) => {
@@ -255,7 +255,7 @@ function createGlobLookup(glob) {
 	};
 }
 
-const renderEntryGlob = /* #__PURE__ */ Object.assign({"/src/content/blog/first-post.md": () => import('../first-post_xe0l2iAY.mjs'),"/src/content/blog/markdown-style-guide.md": () => import('../markdown-style-guide_n49N8IAN.mjs'),"/src/content/blog/second-post.md": () => import('../second-post_IHJdqH4O.mjs'),"/src/content/blog/third-post.md": () => import('../third-post_JYk15oMy.mjs'),"/src/content/blog/using-mdx.mdx": () => import('../using-mdx_AhTtf0vH.mjs')});
+const renderEntryGlob = /* #__PURE__ */ Object.assign({"/src/content/blog/first-post.md": () => import('../first-post_3nFTqXi3.mjs'),"/src/content/blog/markdown-style-guide.md": () => import('../markdown-style-guide_IEFvKf6n.mjs'),"/src/content/blog/second-post.md": () => import('../second-post_vwzW19Q8.mjs'),"/src/content/blog/third-post.md": () => import('../third-post_iQI3AqKj.mjs'),"/src/content/blog/using-mdx.mdx": () => import('../using-mdx_E23YttGH.mjs')});
 const collectionToRenderEntryMap = createCollectionToGlobResultMap({
 	globResult: renderEntryGlob,
 	contentDir,

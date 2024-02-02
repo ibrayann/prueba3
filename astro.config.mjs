@@ -9,7 +9,5 @@ export default defineConfig({
   site: "https://example.com",
   integrations: [mdx(), sitemap()],
   output: "server",
-  adapter: vercel({
-    includeFiles: ["./src/pages/search.astro"],
-  }),
+  adapter: vercel({}),
 });

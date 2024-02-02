@@ -1,7 +1,7 @@
-import { c as createAstro, d as createComponent, r as renderTemplate, g as renderComponent, h as renderHead, e as addAttribute } from '../astro_ewd9_6AG.mjs';
+import { c as createAstro, d as createComponent, r as renderTemplate, e as renderComponent, h as renderHead, f as addAttribute } from '../astro_04W25gnT.mjs';
 import 'kleur/colors';
 import 'cssesc';
-import { g as getCollection, $ as $$FormattedDate, a as $$BaseHead, b as $$Header, c as $$Footer, S as SITE_TITLE, d as SITE_DESCRIPTION } from './__YDrwkA87.mjs';
+import { g as getCollection, $ as $$FormattedDate, a as $$BaseHead, b as $$Header, c as $$Footer, S as SITE_TITLE, d as SITE_DESCRIPTION } from './__T2NxGtAt.mjs';
 /* empty css                          */
 
 const $$Astro = createAstro("https://example.com");
