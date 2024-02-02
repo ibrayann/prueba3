@@ -1,5 +1,5 @@
 ---
-function separarPalabras(url) {
+/* function separarPalabras(url) {
   const query2 = new URLSearchParams(url);
   const palabras = query2.get("q")?.split(" ");
   return palabras;
@@ -15,7 +15,9 @@ function search(url: string) {
 }
 
 const busqueda = search(Astro.url.search);
-export const prerender = false;
+export const prerender = false; */
+
+const data = Astro.url.searchParams.get("q");
 ---
 
 <div class="container mx-auto">
@@ -35,8 +37,8 @@ export const prerender = false;
               <a
                 href="#"
                 class="ml-1 text-sm font-medium text-secondary hover:text-gray-400 md:ml-2 dark:text-secondary dark:hover:text-gray-400"
-                >Resultado de busqueda: {busqueda}</a
-              >
+                >Resultado de busqueda: {data}
+              </a>
             </div>
           </li>
         </ol>
