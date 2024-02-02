@@ -244,7 +244,7 @@ createCollectionToGlobResultMap({
 });
 
 let lookupMap = {};
-lookupMap = {"blog":{"type":"content","entries":{"markdown-style-guide":"/src/content/blog/markdown-style-guide.md","second-post":"/src/content/blog/second-post.md","third-post":"/src/content/blog/third-post.md","first-post":"/src/content/blog/first-post.md","using-mdx":"/src/content/blog/using-mdx.mdx"}}};
+lookupMap = {"blog":{"type":"content","entries":{"first-post":"/src/content/blog/first-post.md","second-post":"/src/content/blog/second-post.md","third-post":"/src/content/blog/third-post.md","using-mdx":"/src/content/blog/using-mdx.mdx","markdown-style-guide":"/src/content/blog/markdown-style-guide.md"}}};
 
 function createGlobLookup(glob) {
 	return async (collection, lookupId) => {
@@ -255,7 +255,7 @@ function createGlobLookup(glob) {
 	};
 }
 
-const renderEntryGlob = /* #__PURE__ */ Object.assign({"/src/content/blog/first-post.md": () => import('../first-post_xe0l2iAY.mjs'),"/src/content/blog/markdown-style-guide.md": () => import('../markdown-style-guide_n49N8IAN.mjs'),"/src/content/blog/second-post.md": () => import('../second-post_IHJdqH4O.mjs'),"/src/content/blog/third-post.md": () => import('../third-post_JYk15oMy.mjs'),"/src/content/blog/using-mdx.mdx": () => import('../using-mdx_7oWZ7JJH.mjs')});
+const renderEntryGlob = /* #__PURE__ */ Object.assign({"/src/content/blog/first-post.md": () => import('../first-post_xe0l2iAY.mjs'),"/src/content/blog/markdown-style-guide.md": () => import('../markdown-style-guide_n49N8IAN.mjs'),"/src/content/blog/second-post.md": () => import('../second-post_IHJdqH4O.mjs'),"/src/content/blog/third-post.md": () => import('../third-post_JYk15oMy.mjs'),"/src/content/blog/using-mdx.mdx": () => import('../using-mdx_Dh8pAnkM.mjs')});
 const collectionToRenderEntryMap = createCollectionToGlobResultMap({
 	globResult: renderEntryGlob,
 	contentDir,

@@ -1,0 +1,46 @@
+---
+function separarPalabras(url) {
+  const query2 = new URLSearchParams(url);
+  const palabras = query2.get("q")?.split(" ");
+  return palabras;
+}
+
+function search(url: string) {
+  console.log(url);
+  const query2 = new URLSearchParams(url);
+  console.log(query2 + "query2");
+  const palabras = query2.get("q");
+  console.log(palabras);
+  return palabras;
+}
+
+const busqueda = search(Astro.url.search);
+export const prerender = false;
+---
+
+<div class="container mx-auto">
+  <section class="px-10 xl:px-60 mt-12 space-y-8">
+    <div class="flex items-center gap-3">
+      <nav class="flex mt-10" aria-label="Breadcrumb">
+        <ol class="inline-flex items-center space-x-1 md:space-x-3">
+          <li
+            class="inline-flex items-center text-secondary hover:text-gray-400 md:ml-2 dark:text-secondary dark:hover:text-gray-400"
+          >
+            <a href="/" class="inline-flex items-center text-sm font-medium">
+              Home
+            </a>
+          </li>
+          <li>
+            <div class="flex items-center">
+              <a
+                href="#"
+                class="ml-1 text-sm font-medium text-secondary hover:text-gray-400 md:ml-2 dark:text-secondary dark:hover:text-gray-400"
+                >Resultado de busqueda: {busqueda}</a
+              >
+            </div>
+          </li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+</div>
