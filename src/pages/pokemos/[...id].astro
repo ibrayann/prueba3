@@ -1,0 +1,13 @@
+---
+const data = Astro.url.pathname;
+const numerosDespuesDeUltimoSlash = data.replace(/\/pokemos\//, "");
+console.log(numerosDespuesDeUltimoSlash);
+
+const response = await fetch(
+  "https://pokeapi.co/api/v2/pokemon/" + numerosDespuesDeUltimoSlash
+);
+const da = await response.json();
+console.log(da.name);
+---
+
+<p>Nombre: {da.name}</p>
