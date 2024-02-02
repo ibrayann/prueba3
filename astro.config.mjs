@@ -9,5 +9,10 @@ export default defineConfig({
   site: "https://example.com",
   integrations: [mdx(), sitemap()],
   output: "server",
-  adapter: vercel({}),
+  adapter: vercel({
+    webAnalytics: {
+      enabled: true,
+    },
+    maxDuration: 8,
+  }),
 });
