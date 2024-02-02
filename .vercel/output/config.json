@@ -26,6 +26,10 @@
 		{
 			"src": "^\\/rss\\.xml\\/?$",
 			"dest": "_render"
+		},
+		{
+			"src": "^\\/search\\/?$",
+			"dest": "_render"
 		}
 	]
 }
