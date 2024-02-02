@@ -16,8 +16,7 @@ function search(url: string) {
 
 const busqueda = search(Astro.url.search);
 export const prerender = false; */
-
-const data = Astro.url.searchParams.get("q");
+const datos = Astro.url.pathname.replace(/\/search\//, "");
 ---
 
 <div class="container mx-auto">
@@ -37,7 +36,7 @@ const data = Astro.url.searchParams.get("q");
               <a
                 href="#"
                 class="ml-1 text-sm font-medium text-secondary hover:text-gray-400 md:ml-2 dark:text-secondary dark:hover:text-gray-400"
-                >Resultado de busqueda: {data}
+                >Resultado de busqueda: {datos}
               </a>
             </div>
           </li>

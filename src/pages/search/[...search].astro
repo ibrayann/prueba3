@@ -1,0 +1,8 @@
+---
+import SearchComponent from "../../components/SearchComponent.astro";
+export const prerender = false;
+const data = Astro.url.searchParams.get("q");
+console.log(data);
+---
+
+<SearchComponent />
