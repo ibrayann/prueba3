@@ -15,7 +15,7 @@ export const prerender = true;
     if (!search || search.length <= 0) return;
     console.log(search);
     const url = new URL("/search", window.location.origin);
-    url.searchParams.set("q", search);
+    url.pathname = `/search/${search}`;
     console.log(url.href.toString());
     const destination = url.href.toString();
     window.location.replace(destination);
