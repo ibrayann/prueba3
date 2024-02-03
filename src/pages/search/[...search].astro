@@ -1,8 +1,76 @@
 ---
-import SearchComponent from "../../components/SearchComponent.astro";
 export const prerender = false;
-const data = Astro.url.searchParams.get("q");
-console.log(data);
+import PostBasic from "../../components/PostBasic.astro";
+
+console.log(Astro.url.pathname);
+const params = Astro.request.url;
+
+const lastSlashIndex = params.lastIndexOf("/");
+const tags = params.substring(lastSlashIndex + 1).toLowerCase();
+const tagsFiltered = tags.split("%20");
+const busqueda = tags.replace(/%20/g, " ");
+
+const AllPost = await Astro.glob("../posts/*.md");
+let postsFiltered = AllPost.filter((post) => {
+  debugger;
+  let postTags = post.frontmatter.tags
+    .toLowerCase()
+    .replace(/,/g, " ")
+    .split(" ")
+    .map((s: string) => s.trim());
+
+  return tagsFiltered.some((tag) =>
+    postTags.includes(tag.trim().toLowerCase())
+  );
+});
 ---
 
-<SearchComponent />
+<div class="container mx-auto">
+  <section class="px-10 xl:px-60 mt-12 space-y-8">
+    <div class="flex items-center gap-3">
+      <nav class="flex mt-10" aria-label="Breadcrumb">
+        <ol class="inline-flex items-center space-x-1 md:space-x-3">
+          <li
+            class="inline-flex items-center text-secondary hover:text-gray-400 md:ml-2 dark:text-secondary dark:hover:text-gray-400"
+          >
+            <a href="/" class="inline-flex items-center text-sm font-medium">
+              Home
+            </a>
+          </li>
+          <li>
+            <div class="flex items-center">
+              <a
+                href="#"
+                class="ml-1 text-sm font-medium text-secondary hover:text-gray-400 md:ml-2 dark:text-secondary dark:hover:text-gray-400"
+                >Resultado de busqueda: {busqueda}</a
+              >
+            </div>
+          </li>
+        </ol>
+      </nav>
+    </div>
+
+    {
+      postsFiltered.length > 0 &&
+        postsFiltered.map((post) => (
+          <PostBasic
+            title={post.frontmatter.titulo}
+            description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+            to={post.frontmatter.slug}
+          />
+        ))
+    }
+    {
+      postsFiltered.length == 0 && (
+        <div class="flex flex-col items-center justify-center">
+          <h1 class="text-3xl font-bold text-center text-gray-700 dark:text-gray-200">
+            No se encontraron resultados
+          </h1>
+          <p class="text-center text-gray-500 dark:text-gray-400">
+            Intenta con otra busqueda
+          </p>
+        </div>
+      )
+    }
+  </section>
+</div>
